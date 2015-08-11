@@ -1,0 +1,3 @@
+Γ;n:κn;b:{Prop v <=> 0 <= n};b:{v = True};a:κ1[x := n] ⊦ κ1[x := n] <: {v:Int|¬(v=0)}
+Γ;x:κx ⊦ {v = x-1} <: κ1
+Γ;n:κn;b:{Prop v <=> 0 <= n};b:{v = True} ⊦ κn <: κx

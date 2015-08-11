@@ -1,0 +1,4 @@
+Γ;p:Peano;q:K[tmp:=p];q':{v=1+q} ⊦ {v=q'} <: {v/=0}
+Γ;tmp:{v=Z} ⊦ {v=0} <: K
+Γ;tmp:{v=S n};n:{v=n};r:K[tmp:=n] ⊦ {v = 1+r} <: K
+

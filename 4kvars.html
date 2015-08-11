@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+    .hs-linenum {
+      color: #B2B2B2; 
+      font-style: italic;
+    }
+    
+    .hs-error {
+      background-color: #FF8585 ;
+    }
+    
+    .hs-keyglyph {
+      color: #007020
+    }
+    
+    .hs-keyword {
+      color: #007020;
+      // font-weight: bold;
+    }
+    
+    .hs-comment, .hs-comment a {color: green;}
+    
+    .hs-str, .hs-chr {color: teal;}
+    
+    .hs-conid { 
+      color: #902000;   /* color: #00FFFF; color: #0E84B5; */
+      //font-weight: bold;  
+    }
+    
+    .hs-definition { 
+      color: #06287E 
+      /* font-weight: bold; */ 
+    }
+    
+    .hs-varid, .hs-varop, .hs-layout {
+      color: black; 
+    }
+    
+    .hs-num {
+      color: #40A070;
+    }
+    
+    .hs-conop {
+      color: #902000; 
+    }
+    
+    .hs-cpp {
+      color: orange;
+    }
+    
+    .hs-sel  {}
+    
+    a.annot {
+      position:relative; 
+      color:#000;
+      text-decoration:none; 
+      white-space: pre; 
+    }
+    
+    a.annot:hover { 
+      z-index:25; 
+      background-color: #D8D8D8;
+    }
+    
+    a.annot span.annottext{display: none}
+    
+    a.annot:hover span.annottext{ 
+      
+      border-radius: 5px 5px;
+      
+      -moz-border-radius: 5px; 
+      -webkit-border-radius: 5px; 
+      
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); 
+      -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.1); 
+    
+      white-space:pre;
+      display:block;
+      position: absolute; 
+      left: 1em; top: 2em; 
+      z-index: 99;
+      margin-left: 5; 
+      background: #FFFFAA; 
+      border: 3px solid #FFAD33;
+      padding: 0.8em 1em;
+    }
+    
+    code {
+       /* font-weight: bold; */
+       background-color: rgb(250, 250, 250); 
+       border: 1px solid rgb(200, 200, 200);
+       padding-left: 4px;
+       padding-right: 4px;
+    }
+    
+    pre {
+      background-color: #f0f0f0;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      padding: 5px;
+      // font-size: 120%;
+      // font-family: Bitstream Vera Sans Mono,monospace;
+      display: block;
+      overflow: visible;
+    }
+    
+    pre>code {
+        border: none;
+        background: none;
+    }
+  </style>
+  <script>
+  
+  document.addEventListener("DOMContentLoaded", function(event) {
+      document.body.innerHTML = document.body.innerHTML.replace(/ (.*) /g,function(str){return "<span class='hs-error'>"+str.substring(1, str.length - 1)+"</span>"})
+  });
+  
+  </script>
+</head>
+<body>
+<pre><span class=hs-linenum>  1: </span><span class='hs-keyword'>module</span> <span class='hs-conid'>Foo</span> <span class='hs-layout'>(</span><span class='hs-varid'>main</span><span class='hs-layout'>)</span> <span class='hs-keyword'>where</span>
+<span class=hs-linenum>  2: </span>
+<span class=hs-linenum>  3: </span><span class='hs-keyword'>data</span> <span class='hs-conid'>Peano</span> <span class='hs-keyglyph'>=</span> <span class='hs-conid'>Z</span> <span class='hs-keyglyph'>|</span> <span class='hs-conid'>S</span> <span class='hs-conid'>Peano</span>
+<span class=hs-linenum>  4: </span>
+<span class=hs-linenum>  5: </span><span class='hs-definition'>foo</span>       <span class='hs-keyglyph'>::</span> <span class='hs-conid'>Peano</span> <span class='hs-keyglyph'>-&gt;</span> <span class='hs-conid'>Int</span>
+<span class=hs-linenum>  6: </span><a class=annot href="#"><span class=annottext>Foo.Peano -&gt; {VV : GHC.Types.Int | VV &gt;= 0}</span><span class='hs-definition'>foo</span></a> <span class='hs-conid'>Z</span>     <span class='hs-keyglyph'>=</span> <a class=annot href="#"><span class=annottext>x1:GHC.Prim.Int# -&gt; {v : GHC.Types.Int | v == (x1 : int)}</span><span class='hs-num'>0</span></a>
+<span class=hs-linenum>  7: </span><span class='hs-definition'>foo</span> <span class='hs-layout'>(</span><span class='hs-conid'>S</span> <span class='hs-varid'>n</span><span class='hs-layout'>)</span> <span class='hs-keyglyph'>=</span> <span class='hs-keyword'>let</span> <a class=annot href="#"><span class=annottext>{VV : GHC.Types.Int | VV &gt;= 0}</span><span class='hs-varid'>r</span></a> <span class='hs-keyglyph'>=</span> <a class=annot href="#"><span class=annottext>Foo.Peano -&gt; {VV : GHC.Types.Int | VV &gt;= 0}</span><span class='hs-varid'>foo</span></a> <a class=annot href="#"><span class=annottext>{v : Foo.Peano | v == n}</span><span class='hs-varid'>n</span></a>
+<span class=hs-linenum>  8: </span>             <span class='hs-keyword'>in</span> <a class=annot href="#"><span class=annottext>GHC.Types.Int</span><span class='hs-num'>1</span></a> <a class=annot href="#"><span class=annottext>x1:GHC.Types.Int -&gt; x2:GHC.Types.Int -&gt; {v : GHC.Types.Int | v == x1 + x2}</span><span class='hs-varop'>+</span></a> <a class=annot href="#"><span class=annottext>{v : GHC.Types.Int | v == r}</span><span class='hs-varid'>r</span></a>
+<span class=hs-linenum>  9: </span>
+<span class=hs-linenum> 10: </span><span class='hs-comment'>-- Γ ⊦ K</span>
+<span class=hs-linenum> 11: </span><span class='hs-comment'>-- Γ;tmp:{v=Z} ⊦ {v=0} &lt;: K</span>
+<span class=hs-linenum> 12: </span><span class='hs-comment'>-- Γ;tmp:{v=S n};n:{v=n} ⊦ {v=n} &lt;: Peano</span>
+<span class=hs-linenum> 13: </span><span class='hs-comment'>-- Γ;tmp:{v=S n};n:{v=n};r:K[tmp:=n] ⊦ {v = 1+r} &lt;: K</span>
+<span class=hs-linenum> 14: </span>
+<span class=hs-linenum> 15: </span>
+<span class=hs-linenum> 16: </span><span class='hs-definition'>main</span> <span class='hs-keyglyph'>::</span> <span class='hs-conid'>Peano</span> <span class='hs-keyglyph'>-&gt;</span> <span class='hs-conid'>Int</span>
+<span class=hs-linenum> 17: </span><a class=annot href="#"><span class=annottext>Foo.Peano -&gt; GHC.Types.Int</span><span class='hs-definition'>main</span></a> <a class=annot href="#"><span class=annottext>Foo.Peano</span><span class='hs-varid'>p</span></a> <span class='hs-keyglyph'>=</span> <span class='hs-keyword'>let</span> <a class=annot href="#"><span class=annottext>{v : GHC.Types.Int | v &gt;= 0}</span><span class='hs-varid'>q</span></a>  <span class='hs-keyglyph'>=</span> <a class=annot href="#"><span class=annottext>Foo.Peano -&gt; {v : GHC.Types.Int | v &gt;= 0}</span><span class='hs-varid'>foo</span></a> <a class=annot href="#"><span class=annottext>{v : Foo.Peano | v == p}</span><span class='hs-varid'>p</span></a>
+<span class=hs-linenum> 18: </span>             <a class=annot href="#"><span class=annottext>GHC.Types.Int</span><span class='hs-varid'>q'</span></a> <span class='hs-keyglyph'>=</span> <span class='hs-layout'>(</span><a class=annot href="#"><span class=annottext>GHC.Types.Int</span><span class='hs-num'>1</span></a> <a class=annot href="#"><span class=annottext>x1:GHC.Types.Int -&gt; x2:GHC.Types.Int -&gt; {v : GHC.Types.Int | v == x1 + x2}</span><span class='hs-varop'>+</span></a> <a class=annot href="#"><span class=annottext>{v : GHC.Types.Int | v == q}</span><span class='hs-varid'>q</span></a><span class='hs-layout'>)</span>
+<span class=hs-linenum> 19: </span>          <span class='hs-keyword'>in</span> <a class=annot href="#"><span class=annottext>x1:GHC.Types.Int -&gt; x2:{v : GHC.Types.Int | v /= 0} -&gt; {v : GHC.Types.Int | v == x1 / x2 &amp;&amp; (x1 &gt;= 0 &amp;&amp; x2 &gt;= 0 =&gt; v &gt;= 0) &amp;&amp; (x1 &gt;= 0 &amp;&amp; x2 &gt;= 1 =&gt; v &lt;= x1)}</span><span class='hs-varid'>div</span></a> <a class=annot href="#"><span class=annottext>GHC.Types.Int</span><span class='hs-num'>100</span></a> <a class=annot href="#"><span class=annottext>{v : GHC.Types.Int | v == q'}</span><span class='hs-varid'>q'</span></a>
+<span class=hs-linenum> 20: </span>
+<span class=hs-linenum> 21: </span><span class='hs-comment'>-- Γ;p:Peano ⊦ κlet</span>
+<span class=hs-linenum> 22: </span><span class='hs-comment'>-- Γ;p:Peano;q:K[tmp:=p] ⊦ {v=1} &lt;: Int</span>
+<span class=hs-linenum> 23: </span><span class='hs-comment'>-- Γ;p:Peano;q:K[tmp:=p] ⊦ {v=q} &lt;: Int</span>
+<span class=hs-linenum> 24: </span><span class='hs-comment'>-- Γ;p:Peano;q:K[tmp:=p];q':{v=1+q} ⊦ {v=100} &lt;: Int</span>
+<span class=hs-linenum> 25: </span><span class='hs-comment'>-- Γ;p:Peano;q:K[tmp:=p];q':{v=1+q} ⊦ {v=q'} &lt;: {v/=0}</span>
+<span class=hs-linenum> 26: </span>
+<span class=hs-linenum> 27: </span>
+<span class=hs-linenum> 28: </span><span class='hs-comment'>{-
+
+QUALIFS: {v = 0, v = 1, v = 2, v = 3, 0 &lt;= v, 0 &lt; v, v &lt; 0, v &lt;= 0}
+vars: {tmp,n,p,q,q',r}
+
+Constraints:
+
+-- Γ ⊦ K
+-- Γ;p:Peano ⊦ κlet
+
+-- Γ;tmp:{v=Z} ⊦ {v=0} &lt;: K
+-- Γ;tmp:{v=S n};n:{v=n};r:K[tmp:=n] ⊦ {v = 1+r} &lt;: K
+
+-- Γ;tmp:{v=S n};n:{v=n} ⊦ {v=n} &lt;: Peano
+-- Γ;p:Peano;q:K[tmp:=p] ⊦ {v=1} &lt;: Int
+-- Γ;p:Peano;q:K[tmp:=p] ⊦ {v=q} &lt;: Int
+-- Γ;p:Peano;q:K[tmp:=p];q':{v=1+q} ⊦ {v=100} &lt;: Int
+-- Γ;p:Peano;q:K[tmp:=p];q':{v=1+q} ⊦ {v=q'} &lt;: {v/=0}
+
+Inital assignment:
+
+K = v = 0 /\ v = 1 /\ v = 2 /\ v = 3 /\ 0 &lt;= v /\ 0 &lt; v /\ v &lt; 0 /\ v &lt;= 0 /\ n = 0 /\ n = 1 /\ n = 2 /\ n = 3 /\ 0 &lt;= n /\ 0 &lt; n /\ n &lt; 0 /\ n &lt;= 0 /\ p = 0 /\ p = 1 /\ p = 2 /\ p = 3 /\ 0 &lt;= p /\ 0 &lt; p /\ p &lt; 0 /\ p &lt;= 0 /\ q = 0 /\ q = 1 /\ q = 2 /\ q = 3 /\ 0 &lt;= q /\ 0 &lt; q /\ q &lt; 0 /\ q &lt;= 0 /\ r = 0 /\ r = 1 /\ r = 2 /\ r = 3 /\ 0 &lt;= r /\ 0 &lt; r /\ r &lt; 0 /\ r &lt;= 0 /\ tmp = 0 /\ tmp = 1 /\ tmp = 2 /\ tmp = 3 /\ 0 &lt;= tmp /\ 0 &lt; tmp /\ tmp &lt; 0 /\ tmp &lt;= 0 /\ q' = 0 /\ q' = 1 /\ q' = 2 /\ q' = 3 /\ 0 &lt;= q' /\ 0 &lt; q' /\ q' &lt; 0 /\ q' &lt;= 0
+κlet = v = 0 /\ v = 1 /\ v = 2 /\ v = 3 /\ 0 &lt;= v /\ 0 &lt; v /\ v &lt; 0 /\ v &lt;= 0 /\ n = 0 /\ n = 1 /\ n = 2 /\ n = 3 /\ 0 &lt;= n /\ 0 &lt; n /\ n &lt; 0 /\ n &lt;= 0 /\ p = 0 /\ p = 1 /\ p = 2 /\ p = 3 /\ 0 &lt;= p /\ 0 &lt; p /\ p &lt; 0 /\ p &lt;= 0 /\ q = 0 /\ q = 1 /\ q = 2 /\ q = 3 /\ 0 &lt;= q /\ 0 &lt; q /\ q &lt; 0 /\ q &lt;= 0 /\ r = 0 /\ r = 1 /\ r = 2 /\ r = 3 /\ 0 &lt;= r /\ 0 &lt; r /\ r &lt; 0 /\ r &lt;= 0 /\ tmp = 0 /\ tmp = 1 /\ tmp = 2 /\ tmp = 3 /\ 0 &lt;= tmp /\ 0 &lt; tmp /\ tmp &lt; 0 /\ tmp &lt;= 0 /\ q' = 0 /\ q' = 1 /\ q' = 2 /\ q' = 3 /\ 0 &lt;= q' /\ 0 &lt; q' /\ q' &lt; 0 /\ q' &lt;= 0
+
+-- Γ ⊦ K
+
+K = v = 0 /\ v = 1 /\ v = 2 /\ v = 3 /\ 0 &lt;= v /\ 0 &lt; v /\ v &lt; 0 /\ v &lt;= 0
+κlet = v = 0 /\ v = 1 /\ v = 2 /\ v = 3 /\ 0 &lt;= v /\ 0 &lt; v /\ v &lt; 0 /\ v &lt;= 0 /\ n = 0 /\ n = 1 /\ n = 2 /\ n = 3 /\ 0 &lt;= n /\ 0 &lt; n /\ n &lt; 0 /\ n &lt;= 0 /\ p = 0 /\ p = 1 /\ p = 2 /\ p = 3 /\ 0 &lt;= p /\ 0 &lt; p /\ p &lt; 0 /\ p &lt;= 0 /\ q = 0 /\ q = 1 /\ q = 2 /\ q = 3 /\ 0 &lt;= q /\ 0 &lt; q /\ q &lt; 0 /\ q &lt;= 0 /\ r = 0 /\ r = 1 /\ r = 2 /\ r = 3 /\ 0 &lt;= r /\ 0 &lt; r /\ r &lt; 0 /\ r &lt;= 0 /\ tmp = 0 /\ tmp = 1 /\ tmp = 2 /\ tmp = 3 /\ 0 &lt;= tmp /\ 0 &lt; tmp /\ tmp &lt; 0 /\ tmp &lt;= 0 /\ q' = 0 /\ q' = 1 /\ q' = 2 /\ q' = 3 /\ 0 &lt;= q' /\ 0 &lt; q' /\ q' &lt; 0 /\ q' &lt;= 0
+
+-- Γ;p:Peano ⊦ κlet
+
+K = v = 0 /\ v = 1 /\ v = 2 /\ v = 3 /\ 0 &lt;= v /\ 0 &lt; v /\ v &lt; 0 /\ v &lt;= 0
+κlet = v = 0 /\ v = 1 /\ v = 2 /\ v = 3 /\ 0 &lt;= v /\ 0 &lt; v /\ v &lt; 0 /\ v &lt;= 0
+
+
+-- Γ;tmp:{v=Z} ⊦ {v=0} &lt;: K
+
+K = v = 0 /\ 0 &lt;= v /\ v &lt;= 0
+κlet = v = 0 /\ v = 1 /\ v = 2 /\ v = 3 /\ 0 &lt;= v /\ 0 &lt; v /\ v &lt; 0 /\ v &lt;= 0
+
+-- Γ;tmp:{v=S n};n:{v=n};r:K[tmp:=n] ⊦ {v = 1+r} &lt;: K
+
+K = 0 &lt;= v
+κlet = v = 0 /\ v = 1 /\ v = 2 /\ v = 3 /\ 0 &lt;= v /\ 0 &lt; v /\ v &lt; 0 /\ v &lt;= 0
+
+-- Γ;tmp:{v=S n};n:{v=n} ⊦ {v=n} &lt;: Peano ✓
+-- Γ;p:Peano;q:K[tmp:=p] ⊦ {v=1} &lt;: Int ✓
+-- Γ;p:Peano;q:K[tmp:=p] ⊦ {v=q} &lt;: Int ✓
+-- Γ;p:Peano;q:K[tmp:=p];q':{v=1+q} ⊦ {v=100} &lt;: Int ✓
+-- Γ;p:Peano;q:K[tmp:=p];q':{v=1+q} ⊦ {v=q'} &lt;: {v/=0} ✓
+
+QUALIFS: {0 &lt;= v, v &lt;= 0,
+          1 &lt;= v, v &lt;= 1, 
+          2 &lt;= v, v &lt;= 2,
+          3 &lt;= v, v &lt;= 3}
+
+vars: {tmp,n,p,q,q',r}
+
+
+Constraints:
+
+-- Γ ⊦ K
+-- Γ;p:Peano ⊦ κlet
+
+-- Γ;tmp:{v=Z} ⊦ {v=0} &lt;: K
+-- Γ;tmp:{v=S n};n:{v=n};r:K[tmp:=n] ⊦ {v = 1+r} &lt;: K
+
+-- Γ;tmp:{v=S n};n:{v=n} ⊦ {v=n} &lt;: Peano
+-- Γ;p:Peano;q:K[tmp:=p] ⊦ {v=1} &lt;: Int
+-- Γ;p:Peano;q:K[tmp:=p] ⊦ {v=q} &lt;: Int
+-- Γ;p:Peano;q:K[tmp:=p];q':{v=1+q} ⊦ {v=100} &lt;: Int
+-- Γ;p:Peano;q:K[tmp:=p];q':{v=1+q} ⊦ {v=q'} &lt;: {v/=0}
+
+Inital assignment:
+
+K = 0 &lt;= v /\ v &lt;= 0 /\ 1 &lt;= v /\ v &lt;= 1 /\ 2 &lt;= v /\ v &lt;= 2 /\ 3 &lt;= v /\ v &lt;= 3 /\ 0 &lt;= tmp /\ tmp &lt;= 0 /\ 1 &lt;= tmp /\ tmp &lt;= 1 /\ 2 &lt;= tmp /\ tmp &lt;= 2 /\ 3 &lt;= tmp /\ tmp &lt;= 3 /\ 0 &lt;= n /\ n &lt;= 0 /\ 1 &lt;= n /\ n &lt;= 1 /\ 2 &lt;= n /\ n &lt;= 2 /\ 3 &lt;= n /\ n &lt;= 3 /\ 0 &lt;= p /\ p &lt;= 0 /\ 1 &lt;= p /\ p &lt;= 1 /\ 2 &lt;= p /\ p &lt;= 2 /\ 3 &lt;= p /\ p &lt;= 3 /\ 0 &lt;= q /\ q &lt;= 0 /\ 1 &lt;= q /\ q &lt;= 1 /\ 2 &lt;= q /\ q &lt;= 2 /\ 3 &lt;= q /\ q &lt;= 3 /\ 0 &lt;= q' /\ q' &lt;= 0 /\ 1 &lt;= q' /\ q' &lt;= 1 /\ 2 &lt;= q' /\ q' &lt;= 2 /\ 3 &lt;= q' /\ q' &lt;= 3 /\ 0 &lt;= r /\ r &lt;= 0 /\ 1 &lt;= r /\ r &lt;= 1 /\ 2 &lt;= r /\ r &lt;= 2 /\ 3 &lt;= r /\ r &lt;= 3
+κlet = 0 &lt;= v /\ v &lt;= 0 /\ 1 &lt;= v /\ v &lt;= 1 /\ 2 &lt;= v /\ v &lt;= 2 /\ 3 &lt;= v /\ v &lt;= 3 /\ 0 &lt;= tmp /\ tmp &lt;= 0 /\ 1 &lt;= tmp /\ tmp &lt;= 1 /\ 2 &lt;= tmp /\ tmp &lt;= 2 /\ 3 &lt;= tmp /\ tmp &lt;= 3 /\ 0 &lt;= n /\ n &lt;= 0 /\ 1 &lt;= n /\ n &lt;= 1 /\ 2 &lt;= n /\ n &lt;= 2 /\ 3 &lt;= n /\ n &lt;= 3 /\ 0 &lt;= p /\ p &lt;= 0 /\ 1 &lt;= p /\ p &lt;= 1 /\ 2 &lt;= p /\ p &lt;= 2 /\ 3 &lt;= p /\ p &lt;= 3 /\ 0 &lt;= q /\ q &lt;= 0 /\ 1 &lt;= q /\ q &lt;= 1 /\ 2 &lt;= q /\ q &lt;= 2 /\ 3 &lt;= q /\ q &lt;= 3 /\ 0 &lt;= q' /\ q' &lt;= 0 /\ 1 &lt;= q' /\ q' &lt;= 1 /\ 2 &lt;= q' /\ q' &lt;= 2 /\ 3 &lt;= q' /\ q' &lt;= 3 /\ 0 &lt;= r /\ r &lt;= 0 /\ 1 &lt;= r /\ r &lt;= 1 /\ 2 &lt;= r /\ r &lt;= 2 /\ 3 &lt;= r /\ r &lt;= 3
+
+-- Γ ⊦ K
+
+K = 0 &lt;= v /\ v &lt;= 0 /\ 1 &lt;= v /\ v &lt;= 1 /\ 2 &lt;= v /\ v &lt;= 2 /\ 3 &lt;= v /\ v &lt;= 3
+κlet = 0 &lt;= v /\ v &lt;= 0 /\ 1 &lt;= v /\ v &lt;= 1 /\ 2 &lt;= v /\ v &lt;= 2 /\ 3 &lt;= v /\ v &lt;= 3 /\ 0 &lt;= tmp /\ tmp &lt;= 0 /\ 1 &lt;= tmp /\ tmp &lt;= 1 /\ 2 &lt;= tmp /\ tmp &lt;= 2 /\ 3 &lt;= tmp /\ tmp &lt;= 3 /\ 0 &lt;= n /\ n &lt;= 0 /\ 1 &lt;= n /\ n &lt;= 1 /\ 2 &lt;= n /\ n &lt;= 2 /\ 3 &lt;= n /\ n &lt;= 3 /\ 0 &lt;= p /\ p &lt;= 0 /\ 1 &lt;= p /\ p &lt;= 1 /\ 2 &lt;= p /\ p &lt;= 2 /\ 3 &lt;= p /\ p &lt;= 3 /\ 0 &lt;= q /\ q &lt;= 0 /\ 1 &lt;= q /\ q &lt;= 1 /\ 2 &lt;= q /\ q &lt;= 2 /\ 3 &lt;= q /\ q &lt;= 3 /\ 0 &lt;= q' /\ q' &lt;= 0 /\ 1 &lt;= q' /\ q' &lt;= 1 /\ 2 &lt;= q' /\ q' &lt;= 2 /\ 3 &lt;= q' /\ q' &lt;= 3 /\ 0 &lt;= r /\ r &lt;= 0 /\ 1 &lt;= r /\ r &lt;= 1 /\ 2 &lt;= r /\ r &lt;= 2 /\ 3 &lt;= r /\ r &lt;= 3
+
+-- Γ;p:Peano ⊦ κlet
+
+K = 0 &lt;= v /\ v &lt;= 0 /\ 1 &lt;= v /\ v &lt;= 1 /\ 2 &lt;= v /\ v &lt;= 2 /\ 3 &lt;= v /\ v &lt;= 3
+κlet = 0 &lt;= v /\ v &lt;= 0 /\ 1 &lt;= v /\ v &lt;= 1 /\ 2 &lt;= v /\ v &lt;= 2 /\ 3 &lt;= v /\ v &lt;= 3 /\ 0 &lt;= p /\ p &lt;= 0 /\ 1 &lt;= p /\ p &lt;= 1 /\ 2 &lt;= p /\ p &lt;= 2 /\ 3 &lt;= p /\ p &lt;= 3
+
+*** Done with wf constraints
+
+-- Γ;tmp:{v=Z} ⊦ {v=0} &lt;: K
+
+K = 0 &lt;= v /\ v &lt;= 0 /\ v &lt;= 1 /\ v &lt;= 2 /\ v &lt;= 3
+κlet = 0 &lt;= v /\ v &lt;= 0 /\ 1 &lt;= v /\ v &lt;= 1 /\ 2 &lt;= v /\ v &lt;= 2 /\ 3 &lt;= v /\ v &lt;= 3 /\ 0 &lt;= p /\ p &lt;= 0 /\ 1 &lt;= p /\ p &lt;= 1 /\ 2 &lt;= p /\ p &lt;= 2 /\ 3 &lt;= p /\ p &lt;= 3
+
+-- Γ;tmp:{v=S n};n:{v=n};r:K[tmp:=n] ⊦ {v = 1+r} &lt;: K
+
+K = 0 &lt;= v /\ v &lt;= 1
+κlet = 0 &lt;= v /\ v &lt;= 0 /\ 1 &lt;= v /\ v &lt;= 1 /\ 2 &lt;= v /\ v &lt;= 2 /\ 3 &lt;= v /\ v &lt;= 3 /\ 0 &lt;= p /\ p &lt;= 0 /\ 1 &lt;= p /\ p &lt;= 1 /\ 2 &lt;= p /\ p &lt;= 2 /\ 3 &lt;= p /\ p &lt;= 3
+
+-- Γ;tmp:{v=S n};n:{v=n};r:K[tmp:=n] ⊦ {v = 1+r} &lt;: K
+
+K = v &lt;= 1
+κlet = 0 &lt;= v /\ v &lt;= 0 /\ 1 &lt;= v /\ v &lt;= 1 /\ 2 &lt;= v /\ v &lt;= 2 /\ 3 &lt;= v /\ v &lt;= 3 /\ 0 &lt;= p /\ p &lt;= 0 /\ 1 &lt;= p /\ p &lt;= 1 /\ 2 &lt;= p /\ p &lt;= 2 /\ 3 &lt;= p /\ p &lt;= 3
+
+-- Γ;tmp:{v=S n};n:{v=n} ⊦ {v=n} &lt;: Peano ✓
+-- Γ;p:Peano;q:K[tmp:=p] ⊦ {v=1} &lt;: Int ✓
+-- Γ;p:Peano;q:K[tmp:=p] ⊦ {v=q} &lt;: Int ✓
+-- Γ;p:Peano;q:K[tmp:=p];q':{v=1+q} ⊦ {v=100} &lt;: Int ✓
+-- Γ;p:Peano;q:K[tmp:=p];q':{v=1+q} ⊦ {v=q'} &lt;: {v/=0} ✓
+
+-}</span>
+</pre>
+</body>
+</html>

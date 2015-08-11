@@ -1,0 +1,27 @@
+Γ ⊦ x:κx
+Γ x:κx ⊦ κ1
+Γ;x:κx ⊦ κiflet
+Γ ⊦ n:κn
+Γ;n:κn ⊦ m:κm
+Γ;n:κn;m:κm ⊦ κ2
+Γ ⊦ κlet
+Γ;x:κx;b:{Prop v <=> 0<=x} ⊦ κif
+
+Γ;x:κx;b:{Prop v <=> 0<=x} ⊦ κif <: κiflet
+Γ;x:κx;b:{Prop v <=> 0<=x};b ⊦ {v=x} <: κif
+Γ;x:κx;b:{Prop v <=> 0<=x};¬b ⊦ {v=0-x} <: κif
+Γ;x:κx;b:{Prop v <=> 0<=x} ⊦ κiflet <: κ1
+Γ ⊦ κlet <: κ2
+Γ ⊦ κn <: κx
+Γ;a:κ1[x := n] ⊦ κm <: κx
+         let G = Γ;a:κ1[x := n];b:κ1[x := m];c':{v=b+1} in
+G;c:{v:Int|v=a+c'} ⊦ Int <: κlet
+
+Γ;x:κx;b:{Prop v <=> 0<=x};¬b ⊦ {v=0} <: Int
+Γ;x:κx;b:{Prop v <=> 0<=x};¬b ⊦ {v=x} <: Int
+Γ;a:κ1[x := n];b:κ1[x := m] ⊦ {v=b} <: Int
+Γ;a:κ1[x := n];b:κ1[x := m] ⊦ {v=1} <: Int
+Γ;a:κ1[x := n];b:κ1[x := m];c':{v=b+1} ⊦ {v=c'} <: Int
+Γ;a:κ1[x := n];b:κ1[x := m];c':{v=b+1} ⊦ {v=a} <: Int
+G;c:{v:Int|v=a+c'} ⊦ κn <: Int
+G;c:{v:Int|v=a+c'} ⊦ {v=c} <: {v:Int|¬(v=0)}

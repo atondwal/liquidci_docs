@@ -1,0 +1,5 @@
+Γ;a:κ1[x := n];b:κ1[x := m];c':{v=b+1};c:{v:Int|v=a+c'} ⊦ {v=c} <: {v:Int|¬(v=0)}
+Γ;x:κx;b:{Prop v <=> 0<=x} ⊦ κiflet <: κ1
+Γ;x:κx;b:{Prop v <=> 0<=x} ⊦ κif <: κiflet
+Γ;x:κx;b:{Prop v <=> 0<=x};b ⊦ {v=x} <: κif
+Γ;x:κx;b:{Prop v <=> 0<=x};¬b ⊦ {v=0-x} <: κif

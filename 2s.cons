@@ -1,0 +1,22 @@
+wf: Γ ⊦ x:κx
+wf: Γ x:κx ⊦ κ1
+wf: Γ;x:κx ⊦ κiflet
+wf: Γ ⊦ n:κn
+wf: Γ n:κn ⊦ κ2
+wf: Γ ⊦ κlet
+wf: Γ;x:κx;b:{Prop v <=> 0<=x} ⊦ κif
+
+Γ;x:κx;b:{Prop v <=> 0<=x} ⊦ κif <: κiflet
+Γ;x:κx;b:{Prop v <=> 0<=x};b ⊦ x <: κif
+Γ;x:κx;b:{Prop v <=> 0<=x};¬b ⊦ {v:Int|v=0-x} <: κif
+Γ;x:κx;b:{Prop v <=> 0<=x} ⊦ κiflet <: κ1
+Γ ⊦ κlet <: κ2
+Γ ⊦ κn <: κx
+Γ;a:κ1[x := n];b:{v:Int|v=a-1} ⊦ Int <: κlet
+
+Γ;a:κ1[x := n] ⊦ κ1 <: Int
+Γ;a:κ1[x := n] ⊦ {v:Int|v=1} <: Int
+Γ;a:κ1[x := n];b:{v:Int|v=a-1} ⊦ κn <: Int
+Γ;x:κx;b:{Prop v <=> 0<=x};¬b ⊦ {v:Int|v=0} <: Int
+Γ;x:κx;b:{Prop v <=> 0<=x};¬b ⊦ {v:Int|v=x} <: Int
+Γ;a:κ1[x := n];b:{v:Int|v=a-1} ⊦ {v:Int|v=a-1} <: {v:Int|¬(v=0)}
